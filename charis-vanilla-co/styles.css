@@ -194,3 +194,11 @@ input,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #d
 .vid-card{margin:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08)}
 .vid-card video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#000;object-fit:cover}
 .vid-card figcaption{padding:.9rem 1rem;font-style:italic;line-height:1.45}
+
+.product-img{width:calc(100% + 48px);margin:-26px -24px 18px;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r) var(--r) 0 0;display:block;height:auto}
+.product-feature .product-img{object-position:center 60%}
+.market-feature{display:grid;gap:18px;margin:0 0 26px;align-items:center}
+.market-feature figure{margin:0;border-radius:var(--r);overflow:hidden}
+.market-feature img{width:100%;height:auto;display:block}
+.hours-todo{background:#fff3b0;color:#3a2a00;padding:.5rem .75rem;border-radius:8px;border:2px dashed #c9a400}
+@media (min-width:760px){.market-feature{grid-template-columns:2fr 3fr}}
