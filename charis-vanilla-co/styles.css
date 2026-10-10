@@ -189,3 +189,8 @@ input,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #d
 .process small{color:inherit;opacity:.8}
 @media (min-width:760px){.process{grid-template-columns:repeat(3,1fr)}.process li:first-child{grid-column:1/-1}}
 @media (min-width:760px){.products{grid-template-columns:repeat(2,1fr)}}
+
+.vid-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.25rem;margin-top:1.5rem}
+.vid-card{margin:0;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.vid-card video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#000;object-fit:cover}
+.vid-card figcaption{padding:.9rem 1rem;font-style:italic;line-height:1.45}
