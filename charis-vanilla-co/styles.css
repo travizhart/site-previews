@@ -232,3 +232,7 @@ tr.flash{background:#fff3b0;transition:background .3s}
 .hero-media{border-radius:var(--r);aspect-ratio:16/9;overflow:hidden}
 .hero-media img{width:100%;height:100%;object-fit:contain}
 @media (min-width:900px){.hero-grid{grid-template-columns:.9fr 1.1fr}}
+/* v5 hero: tall arch, no border, cover centered on bottles */
+.hero-media{border:0;box-shadow:0 18px 40px rgba(46,29,18,.22);border-radius:999px 999px var(--r) var(--r);aspect-ratio:4/4.8;overflow:hidden;margin:0 -8px}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:52.5% 50%}
+@media (min-width:900px){.hero-media{margin:0;max-width:520px;justify-self:end;width:100%}.hero-grid{grid-template-columns:1fr 1fr}}
