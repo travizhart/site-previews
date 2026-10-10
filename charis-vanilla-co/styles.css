@@ -223,3 +223,9 @@ input,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #d
 tr.flash{background:#fff3b0;transition:background .3s}
 @media (min-width:760px){.pcards .label-panel{grid-template-columns:300px 1fr}}
 .mcard p.hours-todo,.mcard p.hours-todo strong{color:#3a2a00;opacity:1}
+/* v3: show full vanilla/coffee images, no cropping */
+.hero-media{border-radius:var(--r);aspect-ratio:auto}
+.hero-media img{height:auto;aspect-ratio:1000/1494;object-fit:contain;object-position:top}
+.pcard .label-img img{aspect-ratio:auto;height:auto;object-fit:contain;object-position:top}
+#vanilla .label-img img{aspect-ratio:1000/1494}
+#coffee .label-img img{aspect-ratio:1/1}
