@@ -7,6 +7,7 @@ const qs=[...f.querySelectorAll('input[data-price]')],tot=document.getElementByI
 const n=i=>Math.max(0,Math.min(50,parseInt(i.value,10)||0));
 const calc=()=>{const s=qs.reduce((a,i)=>a+n(i)*+i.dataset.price,0);tot.textContent='$'+s;return s};
 qs.forEach(i=>i.addEventListener('input',calc));
+document.querySelectorAll('[data-preset="gift12"]').forEach(b=>b.addEventListener('click',()=>{const g=document.getElementById('gift12-qty');if(n(g)===0){g.value=1;calc()}}));
 document.querySelectorAll('[data-preset="gift"]').forEach(b=>b.addEventListener('click',()=>{const g=document.getElementById('gift-qty');if(n(g)===0){g.value=1;calc()}}));
 document.querySelectorAll('.buy').forEach(b=>b.querySelector('.add-order').addEventListener('click',()=>{
  const sz=b.querySelector('input[type=radio]:checked').value,q=Math.max(1,Math.min(50,parseInt(b.querySelector('.qty input').value,10)||1));
