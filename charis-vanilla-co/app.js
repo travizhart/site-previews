@@ -2,6 +2,15 @@
 const t=document.querySelector('.nav-toggle'),l=document.getElementById('nav-list');
 if(t){t.addEventListener('click',()=>{const o=t.getAttribute('aria-expanded')==='true';t.setAttribute('aria-expanded',String(!o));l.classList.toggle('open',!o)});
  l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{t.setAttribute('aria-expanded','false');l.classList.remove('open')}))}
+(()=>{const sf=document.getElementById('site-search');if(!sf)return;const q=document.getElementById('q'),m=document.getElementById('search-msg');
+const idx=[['vanilla','#vanilla','Pure Madagascar Vanilla Extract'],['madagascar','#vanilla','Vanilla Extract'],['coffee','#coffee','Coffee Extract'],['arabica','#coffee','Coffee Extract'],['espresso','#coffee','Coffee Extract'],['extract','#extracts','Extracts'],['price','#extracts','Prices'],['gift','#gifts','Gift bags'],['bag','#gifts','Gift bags'],['present','#gifts','Gift bags'],['market','#markets','Markets'],['hickory','#markets','Downtown Hickory Farmers Market'],['lake norman','#markets','Lake Norman Farmers Market'],['denver','#markets','Lake Norman Farmers Market'],['hours','#markets','Market days & hours'],['saturday','#markets','Market days'],['wednesday','#markets','Market days'],['made','#process','How it\'s made'],['process','#process','How it\'s made'],['smell','#smell-test','Smell test'],['video','#smell-test','Smell test videos'],['story','#story','Our story'],['about','#story','Our story'],['order','#order','Order request'],['buy','#order','Order request'],['contact','#order','Contact']];
+sf.addEventListener('submit',e=>{e.preventDefault();const t=q.value.trim().toLowerCase();m.textContent='';if(!t)return;
+ let hit=idx.find(([k])=>k.includes(t)||t.includes(k));let el=hit&&document.querySelector(hit[1]);
+ if(!el){el=[...document.querySelectorAll('main section, main article')].find(x=>x.textContent.toLowerCase().includes(t));}
+ if(!el){m.textContent=`No results for "${q.value.trim()}". Try vanilla, coffee, gift bags or markets.`;return}
+ m.textContent='Showing: '+(hit?hit[2]:(el.querySelector('h2,h3')||{}).textContent||'result');
+ el.scrollIntoView({behavior:'smooth',block:'start'});el.classList.add('search-hit');setTimeout(()=>el.classList.remove('search-hit'),2200);});
+q.addEventListener('input',()=>{if(!q.value)m.textContent=''});})();
 const f=document.getElementById('order-form');if(!f)return;
 const qs=[...f.querySelectorAll('input[data-price]')],tot=document.getElementById('total'),msg=document.getElementById('form-msg');
 const n=i=>Math.max(0,Math.min(50,parseInt(i.value,10)||0));
