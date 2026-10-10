@@ -222,3 +222,4 @@ input,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #d
 .buy-msg{width:100%;margin:0;font-size:.9rem;color:var(--gold-2);min-height:1em}
 tr.flash{background:#fff3b0;transition:background .3s}
 @media (min-width:760px){.pcards .label-panel{grid-template-columns:300px 1fr}}
+.mcard p.hours-todo,.mcard p.hours-todo strong{color:#3a2a00;opacity:1}
