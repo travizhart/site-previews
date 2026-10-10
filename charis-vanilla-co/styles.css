@@ -202,3 +202,23 @@ input,textarea{font:inherit;color:var(--ink);background:#fff;border:1px solid #d
 .market-feature img{width:100%;height:auto;display:block}
 .hours-todo{background:#fff3b0;color:#3a2a00;padding:.5rem .75rem;border-radius:8px;border:2px dashed #c9a400}
 @media (min-width:760px){.market-feature{grid-template-columns:2fr 3fr}}
+
+.pcards{display:grid;gap:28px}
+.pcards .label-panel{margin-top:0}
+.pcard .label-img{max-width:none;width:100%}
+.pcard .label-img img{width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover}
+#vanilla .label-img img{object-position:center 62%}
+.pcard h3{margin:.2rem 0 .4rem}
+.buy{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:8px;padding-top:16px;border-top:1px solid var(--line)}
+.size-pick{display:flex;gap:8px;width:100%}
+.size-pick label{flex:1}
+.size-pick input{position:absolute;opacity:0}
+.size-pick span{display:block;text-align:center;padding:10px 8px;border:1.5px solid var(--line);border-radius:999px;font-weight:600;cursor:pointer}
+.size-pick input:checked+span{background:var(--brown);color:#fff4df;border-color:var(--brown)}
+.size-pick input:focus-visible+span{outline:2px solid var(--gold-2);outline-offset:2px}
+.qty{display:flex;align-items:center;gap:8px;font-weight:600}
+.qty input{width:64px;padding:8px;border:1.5px solid var(--line);border-radius:10px;font:inherit}
+.add-order{flex:1}
+.buy-msg{width:100%;margin:0;font-size:.9rem;color:var(--gold-2);min-height:1em}
+tr.flash{background:#fff3b0;transition:background .3s}
+@media (min-width:760px){.pcards .label-panel{grid-template-columns:300px 1fr}}

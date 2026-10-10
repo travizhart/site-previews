@@ -84,33 +84,49 @@
       <h2>Two pure extracts. Two sizes.</h2>
       <p>Every extract comes in an amber glass bottle with a black cap. Pick the size that suits your baking.</p>
     </header>
-    <div class="products">
-      <article class="product product-feature">
-        <img class="product-img" src="img/vanilla-baking-sm.webp" width="600" height="896" loading="lazy" alt="Charis Extracts Pure Madagascar Vanilla Extract bottle with vanilla beans, flour and cookies">
-        <div class="product-top"><span class="tag">Signature</span><h3>Pure Madagascar Vanilla Extract</h3></div>
-        <p>Rich, warm vanilla for cookies, cakes, custards, coffee and anything else you bake or stir.</p>
-        <ul class="sizes" aria-label="Sizes and prices"><li><span>2 oz</span><strong>$10</strong></li><li><span>4 oz</span><strong>$18</strong></li></ul>
-      </article>
-      <article class="product">
-        <img class="product-img" src="img/coffee-beans-sm.webp" srcset="img/coffee-beans-sm.webp 560w, img/coffee-beans.webp 900w" sizes="(min-width:760px) 30vw, 100vw" width="900" height="900" loading="lazy" alt="Charis Extracts Coffee Extract bottle surrounded by roasted coffee beans">
-        <div class="product-top"><span class="tag tag-coffee">Deep &amp; roasty</span><h3>Pure Coffee Extract</h3></div>
-        <p>A deep coffee flavor for tiramisu, mocha frosting, chocolate cake and ice cream.</p>
-        <p class="fine"><strong>Ingredients:</strong> New Zealand Vodka, Locally Roasted 100% Arabica Coffee. Gluten Free · Additive Free · 100% Natural.</p>
-        <ul class="sizes" aria-label="Sizes and prices"><li><span>2 oz</span><strong>$10</strong></li><li><span>4 oz</span><strong>$18</strong></li></ul>
-      </article>
-    </div>
-
-    <div class="label-panel">
-      <figure class="label-img"><img src="img/label.webp" width="372" height="588" loading="lazy" alt="Close-up of the Charis Extracts label: Pure Madagascar Vanilla Extract, grace in every drop"></figure>
+    <div class="pcards">
+    <article class="label-panel pcard" id="vanilla">
+      <figure class="label-img"><img src="img/vanilla-baking-sm.webp" srcset="img/vanilla-baking-sm.webp 600w, img/vanilla-baking.webp 1000w" sizes="(min-width:760px) 300px, 100vw" width="1000" height="1494" loading="lazy" alt="Charis Extracts Pure Madagascar Vanilla Extract bottle in a baking scene with vanilla beans, flour and cookies"></figure>
       <div class="label-copy">
-        <p class="eyebrow">What's on the vanilla label</p>
-        <h3>Short list. Nothing hidden.</h3>
+        <p class="eyebrow">Signature · what's on the label</p>
+        <h3>Pure Madagascar Vanilla Extract</h3>
         <dl class="label-facts">
           <div><dt>Ingredients</dt><dd>New Zealand vodka, certified USDA organic Grade&nbsp;B Madagascar vanilla beans</dd></div>
           <div><dt>Also on the label</dt><dd>Gluten free · Additive free · 100% natural</dd></div>
         </dl>
         <p class="fine">Grade B is often called "extract grade". These beans hold less moisture than the plump Grade A beans sold for cooking, so extract makers often choose them.</p>
+        <div class="buy" data-product="vanilla">
+          <div class="size-pick" role="radiogroup" aria-label="Pure Madagascar Vanilla Extract size">
+            <label><input type="radio" name="size-vanilla" value="2" checked><span>2 oz · $10</span></label>
+            <label><input type="radio" name="size-vanilla" value="4"><span>4 oz · $18</span></label>
+          </div>
+          <label class="qty">Qty <input type="number" min="1" max="50" value="1" inputmode="numeric" aria-label="Pure Madagascar Vanilla Extract quantity"></label>
+          <button type="button" class="btn btn-primary add-order">Add to order</button>
+          <p class="buy-msg" role="status"></p>
+        </div>
       </div>
+    </article>
+    <article class="label-panel pcard" id="coffee">
+      <figure class="label-img"><img src="img/coffee-beans-sm.webp" srcset="img/coffee-beans-sm.webp 560w, img/coffee-beans.webp 900w" sizes="(min-width:760px) 300px, 100vw" width="900" height="900" loading="lazy" alt="Charis Extracts Coffee Extract bottle surrounded by roasted coffee beans"></figure>
+      <div class="label-copy">
+        <p class="eyebrow">Deep &amp; roasty · what's on the label</p>
+        <h3>Coffee Extract</h3>
+        <dl class="label-facts">
+          <div><dt>Ingredients</dt><dd>New Zealand Vodka, Locally Roasted 100% Arabica Coffee</dd></div>
+          <div><dt>Also on the label</dt><dd>Gluten free · Additive free · 100% natural</dd></div>
+        </dl>
+        <p class="fine">A deep coffee flavor for tiramisu, mocha frosting, chocolate cake and ice cream.</p>
+        <div class="buy" data-product="coffee">
+          <div class="size-pick" role="radiogroup" aria-label="Coffee Extract size">
+            <label><input type="radio" name="size-coffee" value="2" checked><span>2 oz · $10</span></label>
+            <label><input type="radio" name="size-coffee" value="4"><span>4 oz · $18</span></label>
+          </div>
+          <label class="qty">Qty <input type="number" min="1" max="50" value="1" inputmode="numeric" aria-label="Coffee Extract quantity"></label>
+          <button type="button" class="btn btn-primary add-order">Add to order</button>
+          <p class="buy-msg" role="status"></p>
+        </div>
+      </div>
+    </article>
     </div>
   </div>
 </section>
@@ -232,8 +248,8 @@
         <table class="qty-table">
           <thead><tr><th scope="col">Extract</th><th scope="col">2 oz · $10</th><th scope="col">4 oz · $18</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Vanilla</th><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="10" data-item="Vanilla extract, 2 oz" aria-label="Vanilla 2 oz quantity"></td><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="18" data-item="Vanilla extract, 4 oz" aria-label="Vanilla 4 oz quantity"></td></tr>
-            <tr><th scope="row">Coffee</th><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="10" data-item="Coffee extract, 2 oz" aria-label="Coffee 2 oz quantity"></td><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="18" data-item="Coffee extract, 4 oz" aria-label="Coffee 4 oz quantity"></td></tr>
+            <tr><th scope="row">Vanilla</th><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="10" data-item="Vanilla extract, 2 oz" data-key="vanilla-2" aria-label="Vanilla 2 oz quantity"></td><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="18" data-item="Vanilla extract, 4 oz" data-key="vanilla-4" aria-label="Vanilla 4 oz quantity"></td></tr>
+            <tr><th scope="row">Coffee</th><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="10" data-item="Coffee extract, 2 oz" data-key="coffee-2" aria-label="Coffee 2 oz quantity"></td><td><input type="number" min="0" max="50" value="0" inputmode="numeric" data-price="18" data-item="Coffee extract, 4 oz" data-key="coffee-4" aria-label="Coffee 4 oz quantity"></td></tr>
           </tbody>
         </table>
         <label class="gift-row">Gift bags · $20 <input id="gift-qty" type="number" min="0" max="50" value="0" inputmode="numeric" data-price="20" data-item="Gift bag (4 oz vanilla, cookie recipe, teaspoon)"></label>

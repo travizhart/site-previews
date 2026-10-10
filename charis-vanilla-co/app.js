@@ -8,6 +8,12 @@ const n=i=>Math.max(0,Math.min(50,parseInt(i.value,10)||0));
 const calc=()=>{const s=qs.reduce((a,i)=>a+n(i)*+i.dataset.price,0);tot.textContent='$'+s;return s};
 qs.forEach(i=>i.addEventListener('input',calc));
 document.querySelectorAll('[data-preset="gift"]').forEach(b=>b.addEventListener('click',()=>{const g=document.getElementById('gift-qty');if(n(g)===0){g.value=1;calc()}}));
+document.querySelectorAll('.buy').forEach(b=>b.querySelector('.add-order').addEventListener('click',()=>{
+ const sz=b.querySelector('input[type=radio]:checked').value,q=Math.max(1,Math.min(50,parseInt(b.querySelector('.qty input').value,10)||1));
+ const i=f.querySelector(`[data-key="${b.dataset.product}-${sz}"]`);i.value=Math.min(50,n(i)+q);calc();
+ b.querySelector('.buy-msg').textContent=`Added ${q} × ${sz} oz to your order.`;
+ i.closest('tr').classList.add('flash');setTimeout(()=>i.closest('tr').classList.remove('flash'),1500);
+ document.getElementById('order').scrollIntoView({behavior:'smooth'});}));
 f.addEventListener('submit',e=>{e.preventDefault();msg.classList.remove('err');
  const items=qs.filter(i=>n(i)>0).map(i=>`- ${n(i)} x ${i.dataset.item} ($${n(i)*+i.dataset.price})`);
  const name=f.elements['name'].value.trim(),reach=f.elements['reach'].value.trim(),notes=f.elements['notes'].value.trim();
