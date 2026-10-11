@@ -252,3 +252,7 @@ section[id],article[id]{scroll-margin-top:150px}
 .hero h1{font-size:clamp(1.5rem,5.4vw,2.1rem)}
 @media (min-width:760px){.brand-mark{width:66px;height:66px}.brand-text strong{font-size:2.4rem}.brand-text small{font-size:.8rem}}
 @media (max-width:360px){.brand-mark{width:46px;height:46px}.brand-text strong{font-size:1.5rem}}
+/* v10: script hero headline, centered with eyebrow */
+.hero .eyebrow{text-align:center}
+.hero h1{font-family:'Sacramento',cursive;font-weight:400;font-size:clamp(2.3rem,9vw,2.9rem);line-height:1.15;text-align:center;letter-spacing:0}
+.hero h1::after{margin-left:auto;margin-right:auto}
