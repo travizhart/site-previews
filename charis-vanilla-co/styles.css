@@ -254,7 +254,7 @@ section[id],article[id]{scroll-margin-top:150px}
 @media (max-width:360px){.brand-mark{width:46px;height:46px}.brand-text strong{font-size:1.5rem}}
 /* v10: script hero headline, centered with eyebrow */
 .hero .eyebrow{text-align:center}
-.hero h1{font-family:'Birthstone',cursive;font-weight:400;font-size:clamp(2.4rem,9vw,3rem);line-height:1.15;text-align:center;letter-spacing:0}
+.hero h1{font-family:'Waterfall',cursive;font-weight:400;font-size:clamp(2.6rem,10vw,3.2rem);line-height:1.15;text-align:center;letter-spacing:0}
 .hero h1::after{margin-left:auto;margin-right:auto}
 /* v11: brand name matches logo wordmark */
 .brand-text strong{font-family:'Montserrat',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:1.02rem;line-height:1.15;white-space:nowrap}
