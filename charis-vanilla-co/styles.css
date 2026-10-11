@@ -261,3 +261,4 @@ section[id],article[id]{scroll-margin-top:150px}
 .brand-text small{margin-top:5px}
 @media (max-width:360px){.brand-text strong{font-size:.88rem;letter-spacing:.1em}}
 @media (min-width:760px){.brand-text strong{font-size:1.45rem;letter-spacing:.16em}}
+.gift-ctas{display:flex;flex-wrap:wrap;gap:14px}
