@@ -245,3 +245,10 @@ tr.flash{background:#fff3b0;transition:background .3s}
 .search-msg:empty{display:none}
 .search-hit{outline:3px solid #e2b84a;outline-offset:4px;border-radius:var(--r);transition:outline-color .4s}
 section[id],article[id]{scroll-margin-top:150px}
+/* v9: bigger brand, smaller hero headline */
+.brand-mark{width:56px;height:56px}
+.brand-text strong{font-size:1.85rem}
+.brand-text small{font-size:.74rem}
+.hero h1{font-size:clamp(1.5rem,5.4vw,2.1rem)}
+@media (min-width:760px){.brand-mark{width:66px;height:66px}.brand-text strong{font-size:2.4rem}.brand-text small{font-size:.8rem}}
+@media (max-width:360px){.brand-mark{width:46px;height:46px}.brand-text strong{font-size:1.5rem}}
